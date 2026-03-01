@@ -1,0 +1,127 @@
+<section id="education" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold text-white border-bottom-cardinal mx-auto pb-2" style="width: fit-content;">Education</h2>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        
+        <div class="education-timeline ps-4 border-start-cardinal">
+          {{/* We use .ByDate.Reverse to ensure MS (2026) is on top, 
+             then BS (2022), then HS (2007). 
+          */}}
+          {{ range (where .Site.RegularPages "Section" "education").ByDate.Reverse }}
+          <div class="education-card mb-5 p-4 rounded shadow-sm position-relative">
+            
+            <div class="timeline-dot"></div>
+
+            <div class="d-flex justify-content-between align-items-start flex-wrap">
+              <div class="mb-2">
+                <h4 class="fw-bold text-white mb-1">{{ .Title }}</h4>
+                <h5 class="text-cardinal mb-2">{{ .Params.institution }}</h5>
+              </div>
+              <div class="text-md-end mt-2 mt-md-0">
+                <span class="badge bg-cardinal px-3 py-2">{{ .Params.duration }}</span>
+              </div>
+            </div>
+
+            <div class="education-meta mt-2 mb-3">
+              {{ if .Params.gpa }}
+              <span class="text-light opacity-75 me-3">
+                <i class="fas fa-chart-line text-cardinal me-2"></i><strong>GPA:</strong> {{ .Params.gpa }}
+              </span>
+              {{ end }}
+              {{ if .Params.location }}
+              <span class="text-light opacity-75">
+                <i class="fas fa-map-marker-alt text-cardinal me-2"></i>{{ .Params.location }}
+              </span>
+              {{ end }}
+            </div>
+            
+            <div class="education-content text-light opacity-90">
+              {{ .Content }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root { 
+    --cardinal-red: #8C1515; 
+    --card-bg: rgba(255, 255, 255, 0.05);
+  }
+
+  .text-cardinal { color: var(--cardinal-red) !important; }
+  .bg-cardinal { background-color: var(--cardinal-red) !important; color: white !important; }
+  
+  .border-bottom-cardinal {
+    border-bottom: 3px solid var(--cardinal-red) !important;
+  }
+
+  /* Vertical Timeline Line */
+  .border-start-cardinal {
+    border-left: 2px solid rgba(140, 21, 21, 0.3) !important;
+    position: relative;
+  }
+
+  /* Card Styling */
+  .education-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+  }
+
+  .education-card:hover {
+    transform: translateX(8px);
+    border-color: var(--cardinal-red);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  /* Decorative Dot on the Timeline */
+  .timeline-dot {
+    position: absolute;
+    left: -33px; 
+    top: 28px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--cardinal-red);
+    border-radius: 50%;
+    border: 3px solid #121212; /* Match your site's dark background */
+    z-index: 2;
+  }
+
+  /* Typography for content */
+  .education-content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .education-content ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .education-content li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+  }
+
+  .education-content li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--cardinal-red);
+    font-weight: bold;
+  }
+
+  /* Responsive badge tweak */
+  @media (max-width: 576px) {
+    .badge { font-size: 0.75rem; }
+  }
+</style>

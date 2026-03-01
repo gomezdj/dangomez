@@ -2,8 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/experience/snyder-lab/</loc>
+  </url><url>
+    <loc>http://localhost:1313/experience/csueb/</loc>
+  </url><url>
+    <loc>http://localhost:1313/experience/roche/</loc>
+  </url><url>
+    <loc>http://localhost:1313/experience/thermofisher/</loc>
+  </url><url>
+    <loc>http://localhost:1313/experience/jabsom/</loc>
+  </url><url>
+    <loc>http://localhost:1313/experience/ucsd/</loc>
+  </url><url>
+    <loc>http://localhost:1313/experience/uhmanoa/</loc>
+  </url><url>
+    <loc>http://localhost:1313/education/</loc>
+    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/education/ms-bio/</loc>
+    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/publications/</loc>
-    <lastmod>2022-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/publications/2023-cells-conf/</loc>
+    <lastmod>2023-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/education/bs-bio/</loc>
+    <lastmod>2022-05-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/publications/2022-mdpi/</loc>
     <lastmod>2022-01-01T00:00:00+00:00</lastmod>
@@ -17,12 +46,20 @@
     <loc>http://localhost:1313/tags/neuropathogenesis/</loc>
     <lastmod>2022-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2022-01-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2022-01-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/education/hs/</loc>
+    <lastmod>2007-06-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/achievements/achievements/</loc>
+  </url><url>
+    <loc>http://localhost:1313/achievements/</loc>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/experience/</loc>
   </url>
 </urlset>

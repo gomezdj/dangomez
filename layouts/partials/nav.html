@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #121212; border-bottom: 1px solid #2d2d2d; z-index: 1030;">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white" href="{{ .Site.BaseURL | relURL }}">
+      {{ .Site.Title | default "Daniel J. Gomez" }}
+    </a>
+
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        {{ if .Site.Menus.main }}
+          {{ range .Site.Menus.main }}
+          <li class="nav-item">
+            <a class="nav-link px-3 text-white fw-medium custom-nav-link" href="{{ .URL | relURL }}">
+              {{ .Name }}
+            </a>
+          </li>
+          {{ end }}
+        {{ else }}
+          <li class="nav-item"><span class="nav-link text-danger small">Menu Data Missing</span></li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  /* Ensure the links are bright and turn Cardinal Red on hover */
+  .custom-nav-link {
+    opacity: 0.85;
+    transition: all 0.2s ease;
+    color: #ffffff !important;
+  }
+  .custom-nav-link:hover {
+    opacity: 1;
+    color: #8C1515 !important; /* Cardinal Red */
+  }
+</style>

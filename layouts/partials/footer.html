@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<footer id="footer" class="py-5" style="background-color: #121212; border-top: 1px solid #2d2d2d;">
+  <div class="container text-center">
+    
+    <section id="contact" class="mb-5">
+      <h2 class="display-6 fw-bold text-white mb-3">Get in Touch</h2>
+      <p class="text-secondary mx-auto mb-4" style="max-width: 600px;">
+        My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+      </p>
+      <a href="mailto:{{ .Site.Params.email }}" class="btn btn-cardinal px-5 py-3 fw-bold">
+        <i class="fas fa-paper-plane me-2"></i>Mail Me
+      </a>
+    </section>
+
+    <hr class="my-5" style="border-top: 1px solid #2d2d2d; opacity: 1;">
+
+    <div class="d-flex justify-content-center gap-3 mb-4">
+      {{ $socials := slice 
+        (dict "id" "github" "icon" "fa-github" "url" (printf "https://github.com/%s" .Site.Params.github))
+        (dict "id" "linkedin" "icon" "fa-linkedin-in" "url" (printf "https://linkedin.com/in/%s" .Site.Params.linkedin))
+        (dict "id" "twitter" "icon" "fa-x-twitter" "url" (printf "https://x.com/%s" .Site.Params.twitter))
+        (dict "id" "instagram" "icon" "fa-instagram" "url" (printf "https://instagram.com/%s" .Site.Params.instagram))
+        (dict "id" "facebook" "icon" "fa-facebook-f" "url" (printf "https://facebook.com/%s" .Site.Params.facebook))
+      }}
+
+      {{ range $socials }}
+      <a href="{{ .url }}" target="_blank" class="social-sq-icon" title="{{ .id }}">
+        <i class="fa-brands {{ .icon }}"></i>
+      </a>
+      {{ end }}
+    </div>
+
+    <div class="footer-credits text-secondary small">
+      <p class="mb-0">&copy; {{ now.Format "2006" }} {{ .Site.Params.name }}. All rights reserved.</p>
+      <p class="mt-1">Made with <span class="text-cardinal">♥</span> and Hugo</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  :root { --cardinal-red: #8C1515; --dark-grey: #1a1a1a; }
+
+  /* Solid Cardinal Button */
+  .btn-cardinal {
+    color: white;
+    background-color: var(--cardinal-red);
+    border: none;
+    transition: all 0.3s ease;
+  }
+  .btn-cardinal:hover {
+    background-color: #a41919;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(140, 21, 21, 0.4);
+  }
+
+  /* Curved Square Icons - Dark Profile Style */
+  .social-sq-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: var(--dark-grey);
+    color: #a0aec0;
+    border: 1px solid #2d2d2d;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  .social-sq-icon:hover {
+    background-color: var(--cardinal-red);
+    color: white;
+    border-color: var(--cardinal-red);
+    transform: translateY(-3px);
+  }
+  .text-cardinal { color: var(--cardinal-red) !important; }
+</style>

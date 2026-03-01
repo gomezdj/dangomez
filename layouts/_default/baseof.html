@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    {{ partial "head.html" . }}
+    <body>
+        {{ partial "nav.html" . }}
+
+        <main>
+            {{ block "main" . }}{{ end }}
+        </main>
+
+        {{ partial "footer.html" . }}
+
+        {{ partial "scripts.html" . }}
+    </body>
+<style>
+    :root {
+        /* Change these from dark colors to light colors */
+        --text-color: #e4e6eb;
+        --text-secondary-color: #b0b3b8;
+        --text-link-color: #ffffff;
+        
+        /* Ensure the background stays dark */
+        --background-color: #121212;
+        --secondary-background-color: #1a1a1a;
+        --primary-color: #8C1515; /* Cardinal Red */
+        --secondary-color: #212529;
+    }
+
+    body {
+        color: var(--text-color); /* This forces the body to use the light text */
+        background-color: var(--background-color);
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+</style>
+</html>

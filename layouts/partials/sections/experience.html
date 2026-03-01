@@ -1,0 +1,133 @@
+<section id="experience" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold text-white border-bottom-cardinal mx-auto pb-2" style="width: fit-content;">Experience</h2>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-11 col-lg-10">
+        
+        <div class="experience-card rounded shadow-lg overflow-hidden">
+          <div class="row g-0">
+            
+            <div class="col-md-4 col-lg-3 bg-dark-accent p-3 p-md-4 border-end-cardinal">
+              <div class="nav flex-column gap-2" id="exp-tabs">
+                {{ range $index, $element := (where .Site.RegularPages "Section" "experience").ByWeight }}
+                <button class="btn btn-experience-tab {{ if eq $index 0 }}active{{ end }} text-start w-100" 
+                        onclick="showExperience(event, 'content-{{ $index }}')">
+                    {{ .Params.company }}
+                </button>
+                {{ end }}
+              </div>
+            </div>
+
+            <div class="col-md-8 col-lg-9 p-4 p-md-5">
+              {{ range $index, $element := (where .Site.RegularPages "Section" "experience").ByWeight }}
+              <div class="exp-pane {{ if ne $index 0 }}d-none{{ end }}" id="content-{{ $index }}">
+                
+                <div class="d-flex justify-content-between align-items-start flex-wrap mb-4">
+                  <div>
+                    <h3 class="fw-bold text-white mb-1">{{ .Title }}</h3>
+                    <h5 class="text-cardinal fw-bold">@ {{ .Params.company }}</h5>
+                  </div>
+                  <div class="text-md-end text-light opacity-75 small mt-2 mt-md-0">
+                    <div><i class="fas fa-calendar-alt text-cardinal me-2"></i>{{ .Params.duration }}</div>
+                    <div><i class="fas fa-map-marker-alt text-cardinal me-2"></i>{{ .Params.location }}</div>
+                  </div>
+                </div>
+                
+                <div class="experience-description text-light">
+                  {{ .Content }}
+                </div>
+              </div>
+              {{ end }}
+            </div>
+
+          </div>
+        </div></div>
+    </div>
+  </div>
+</section>
+
+<script>
+function showExperience(evt, paneId) {
+    var panes = document.getElementsByClassName("exp-pane");
+    for (var i = 0; i < panes.length; i++) {
+        panes[i].classList.add("d-none");
+    }
+    var buttons = document.getElementsByClassName("btn-experience-tab");
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("active");
+    }
+    document.getElementById(paneId).classList.remove("d-none");
+    evt.currentTarget.classList.add("active");
+}
+</script>
+
+<style>
+  :root { 
+    --cardinal-red: #8C1515; 
+    --dark-bg: rgba(30, 30, 30, 0.6);
+  }
+
+  /* Card Container */
+  .experience-card {
+    background: var(--dark-bg);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  .bg-dark-accent {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  /* Side Divider for desktop */
+  @media (min-width: 768px) {
+    .border-end-cardinal {
+      border-right: 2px solid rgba(140, 21, 21, 0.3);
+    }
+  }
+
+  /* Button Styling */
+  .btn-experience-tab {
+    background-color: transparent;
+    color: #cbd5e0;
+    border: none;
+    border-left: 2px solid transparent;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+  }
+
+  .btn-experience-tab.active {
+    color: var(--cardinal-red) !important;
+    border-left: 2px solid var(--cardinal-red);
+    background: rgba(140, 21, 21, 0.1) !important;
+  }
+
+  .btn-experience-tab:hover:not(.active) {
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  /* Bullet Carrots */
+  .experience-description ul { list-style: none; padding-left: 0; margin-top: 1rem;}
+  .experience-description li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #e2e8f0;
+  }
+  .experience-description li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--cardinal-red);
+    font-size: 1.2rem;
+  }
+
+  .text-cardinal { color: var(--cardinal-red) !important; }
+  .border-bottom-cardinal { border-bottom: 3px solid var(--cardinal-red) !important; }
+</style>

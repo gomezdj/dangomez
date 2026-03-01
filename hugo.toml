@@ -1,26 +1,78 @@
-baseURL = "https://gomezdj.github.io/"
+baseURL = "https://gomezdj.github.io"
 languageCode = "en-us"
 title = "Daniel J. Gomez"
 theme = "hugo-profile"
 
 [params]
-    title = "Daniel J. Gomez"
-    description = "Clinical Computational Scientist | Snyder Lab"
-    profession = "Graduate Research Fellow, Stanford Genetics"
-    avatar = "images/profile.jpg" # Points to static/images/profile.jpg
+    # --- Identity ---
+    name = "Daniel J. Gomez"
+    profession = "Snyder Lab | Stanford Genetics"
+    avatar = "images/dangomez.jpeg" # Updated to match your previous code
+    greeting = "Hi, I'm Daniel"
+    bio = "Bioinformatics Scientist focusing on Clinical Computational Science at Stanford."
     
-    # Custom 3-column-like behavior
-    toc = true 
+    # --- Theme Features ---
+    fixedNavbar = true
+    showScrollToTop = true
+    
+    # --- Contact Info ---
+    email = "d.gomez@me.com"
+    location = "Stanford, CA"
 
+    # --- Social Links for Hero & Footer Logic ---
+    # These top-level keys fix the %!s(<nil>) error in your footer
+    github = "gomezdj"
+    linkedin = "danieljgomez1"
+    twitter = "daniel_j_gomez"
+    x = "daniel_j_gomez"
+    instagram = "molecular.jigsaw.puzzle"
+    facebook = "daniel.j.gomez88"
+    scholar = "So6NDwMAAAAJ" # Your Google Scholar ID
+
+    # --- Social Icons Array (Used by some theme templates for loops) ---
     [[params.social]]
-        name = "X"
+        icon = "fab fa-google"
+        link = "https://scholar.google.com/citations?user=So6NDwMAAAAJ"
+        title = "Google Scholar"
+    [[params.social]]
+        icon = "fab fa-github"
+        link = "https://github.com/gomezdj"
+        title = "GitHub"
+    [[params.social]]
         icon = "fab fa-x-twitter"
-        url = "https://x.com/daniel_j_gomez"
+        link = "https://x.com/daniel_j_gomez"
+        title = "X"
     [[params.social]]
-        name = "Bluesky"
-        icon = "fas fa-cloud"
-        url = "https://bsky.app/profile/danieljgomez"
-    [[params.social]]
-        name = "Scholar"
-        icon = "fas fa-graduation-cap"
-        url = "https://scholar.google.com/danieljgomez"
+        icon = "fab fa-linkedin"
+        link = "https://www.linkedin.com/in/danieljgomez1/"
+        title = "LinkedIn"
+
+# --- Header Navigation ---
+[[menu.main]]
+    name = "About Me"
+    url = "#about"
+    weight = 1
+[[menu.main]]
+    name = "Experience"
+    url = "#experience"
+    weight = 2
+[[menu.main]]
+    name = "Education"
+    url = "#education"
+    weight = 3
+[[menu.main]]
+    name = "Projects"
+    url = "#projects"
+    weight = 4
+[[menu.main]]
+    name = "Achievements"
+    url = "#achievements"
+    weight = 5
+[[menu.main]]
+    name = "Gallery"
+    url = "#gallery"
+    weight = 6
+[[menu.main]]
+    name = "Contact"
+    url = "#contact"
+    weight = 7

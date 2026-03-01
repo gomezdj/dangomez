@@ -2,7 +2,7 @@
 title: "Precision Bioinformatics & Clinical Computing"
 ---
 
-I am **Daniel J. Gomez**, a Graduate Research Fellow in the **Snyder Lab at Stanford Genetics**. 
+I am **Daniel Joseph Gomez**, a Graduate Research Fellow in the **Snyder Lab at Stanford Genetics**. 
 
 My research focuses on:
 * **Digital Twins & AI Virtual Cells**

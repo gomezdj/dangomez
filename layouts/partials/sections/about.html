@@ -1,0 +1,100 @@
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center text-light">
+      
+     <div class="col-md-5 text-center mt-5 mt-md-0">
+        <img src="{{ "/images/dangomez.jpeg" | relURL }}" 
+             alt="Daniel J. Gomez" 
+             class="img-fluid rounded-circle shadow-lg" 
+             style="width: 100%; max-width: 320px; aspect-ratio: 1 / 1; object-fit: cover; border: 5px solid #fff;">
+      </div>
+      
+      
+      <div class="col-md-7">
+        <h2 class="mb-4 fw-bold text-white border-bottom-cardinal pb-2" style="width: fit-content;">About Me</h2>
+        
+        <div class="about-text mb-4" style="line-height: 1.8; opacity: 0.9;">
+          {{ .Content }}
+        </div>
+        
+        <p class="mt-4 mb-3 text-white font-weight-bold">Core Research & Tech Stack:</p>
+        
+        <ul class="skill-list list-unstyled d-flex flex-wrap">
+          <li>Spatial Multi-omics</li>
+          <li>Generative AI / Virtual Cells</li>
+          <li>Bioinformatics (R/Python)</li>
+          <li>Cloud Computing</li>
+          <li>Single-cell Analysis</li>
+          <li>Clinical Digital Twins</li>
+        </ul>
+        
+        	<div class="mt-4">
+    		<a href="mailto:d.gomez@me.com" class="btn btn-cardinal me-2">
+        			<i class="fas fa-envelope me-1"></i> Email
+    		</a>
+
+    		<a href="/daniel_gomez_cv.pdf" target="_blank" class="btn btn-cardinal me-2">
+        			<i class="fas fa-file-download me-1"></i> Resume
+    		</a>
+
+    		<a href="#contact" class="btn btn-outline-light btn-sm">
+        		Contact
+    		</a>
+	</div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Official Stanford Cardinal Red */
+  :root {
+    --cardinal-red: #8C1515;
+  }
+
+  .border-bottom-cardinal {
+    border-bottom: 3px solid var(--cardinal-red) !important;
+  }
+
+  .skill-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 250px));
+    gap: 0 10px;
+    padding: 0;
+    margin: 20px 0 0 0;
+  }
+
+  .skill-list li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    color: #cbd5e0;
+  }
+
+  /* The "Carrot" Styling */
+  .skill-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--cardinal-red);
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  /* Red Buttons */
+  .btn-cardinal {
+    background-color: transparent;
+    color: var(--cardinal-red);
+    border: 1px solid var(--cardinal-red);
+    padding: 5px 15px;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+  }
+
+  .btn-cardinal:hover {
+    background-color: var(--cardinal-red);
+    color: #fff;
+  }
+</style>
