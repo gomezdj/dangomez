@@ -1,0 +1,10 @@
+body {
+    background-color: #05080a;
+    color: #cbd5e1;
+}
+.sidebar {
+    border-right: 1px solid #1e293b;
+}
+a {
+    color: #22c55e; /* Genomics Green */
+}
