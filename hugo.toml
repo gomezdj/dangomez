@@ -1,0 +1,26 @@
+baseURL = "https://gomezdj.github.io/"
+languageCode = "en-us"
+title = "Daniel J. Gomez"
+theme = "hugo-profile"
+
+[params]
+    title = "Daniel J. Gomez"
+    description = "Clinical Computational Scientist | Snyder Lab"
+    profession = "Graduate Research Fellow, Stanford Genetics"
+    avatar = "images/profile.jpg" # Points to static/images/profile.jpg
+    
+    # Custom 3-column-like behavior
+    toc = true 
+
+    [[params.social]]
+        name = "X"
+        icon = "fab fa-x-twitter"
+        url = "https://x.com/daniel_j_gomez"
+    [[params.social]]
+        name = "Bluesky"
+        icon = "fas fa-cloud"
+        url = "https://bsky.app/profile/danieljgomez"
+    [[params.social]]
+        name = "Scholar"
+        icon = "fas fa-graduation-cap"
+        url = "https://scholar.google.com/danieljgomez"
