@@ -1,7 +1,8 @@
-## Daniel J. Gomez - Professional Portfolio
+# Daniel J. Gomez - Professional Portfolio
 
 This repository contains the source code for my professional portfolio, hosted at gomezdj.github.io. The site is built using the Hugo static site generator and the hugo-profile theme.
-# 🧬 About the Research
+
+## 🧬 About the Research
 
 I am a Graduate Research Fellow in the Snyder Lab at Stanford Genetics. My work focuses on:
 
@@ -11,7 +12,7 @@ I am a Graduate Research Fellow in the Snyder Lab at Stanford Genetics. My work 
 
     Interorgan Communication Maps (MoTrPAC, HuBMAP, HTAN)
 
-# 🛠 Tech Stack
+## 🛠 Tech Stack
 
     Framework: Hugo (Extended Version)
 
