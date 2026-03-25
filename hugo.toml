@@ -17,7 +17,7 @@ theme = "hugo-profile"
     favicon = true
     
     # --- Contact Info ---
-    email = "gomezdj@proton.me"
+    email = "daniel.gomez.csi@gmail.com"
     location = "Stanford, CA"
 
     # --- Social Links for Hero & Footer Logic ---
@@ -29,7 +29,7 @@ theme = "hugo-profile"
     instagram = "_gomezdj_"
     facebook = "daniel.j.gomez88"
     scholar = "So6NDwMAAAAJ" # Your Google Scholar ID
-    resume_url = "/data/danieljgomez_cv.pdf"
+    resume_url = "/data/resume.pdf"
     
     # --- Social Icons Array (Used by some theme templates for loops) ---
     [[params.social]]
