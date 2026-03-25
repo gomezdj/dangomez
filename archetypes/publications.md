@@ -15,17 +15,17 @@ institution: "Stanford Genetics"
 consortia: [] # e.g., ["HuBMAP", "HTAN", "MoTrPAC"]
 
 # --- Computational Stack (Stanford Focus) ---
-giotto_modules: [] # e.g., ["Giotto Suite", "Giotto Analyzer", "Giotto Visualizer"]
+spatial_modules: [] # e.g., ["MaxFuse", "Squidpy", "LIANA+", "SPACEc"]
 spatial_tech: []    # e.g., ["Xenium", "Visium", "CODEX"]
 analysis_modality: "Spatial Multi-omics"
 
 # --- [CRITICAL] Safety Net ---
-tags: ["Giotto", "Stanford Genetics", "Spatial Biology"]
+tags: ["SPACEc", "Stanford Genetics", "Spatial Biology"]
 summary: ""
 ---
 
 ## Computational Workflow
-This project utilized the **Giotto Suite** for:
+This project utilized SPACEc, LIANA+, and NiCo for:
 - [ ] Spatial clustering
 - [ ] Cell-type deconvolution
 - [ ] Ligand-receptor interaction mapping
